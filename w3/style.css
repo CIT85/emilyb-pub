@@ -1,0 +1,36 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    background-color: #121212;
+    color: #fefefe;
+}
+
+a {
+    color: #fcb7de;
+}
+
+a:visited {
+    color: #c7fc86;
+}
+
+a:hover, a:active {
+    color: #f81597;
+}
+
+h1 {
+    color: #bb86fc;
+}
+
+h2 {
+    color: #fcbb86;
+}
+
+h3 {
+    color: #27a0f7;
+}
+
+img {
+    width: 500px;
+}
