@@ -197,6 +197,59 @@ caption {
     font-style: italic;
 }
 
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    font: inherit;
+    color: inherit;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+}
+
+label {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+    background-color: #f1f1f1;
+    color: inherit;
+}
+
+button {
+    padding: 0.7rem 1.2rem;
+    background-color: #d6c0f7;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+button:hover {
+  background-color: #e5ffec;
+}
+
 /* footer flexbox at bottom of page */
 footer {
 /*     position: fixed;

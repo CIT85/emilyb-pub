@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <h2>Menu</h2>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="trends-timeline.html">Trends Timeline</a>
+                </li>
+                <li>
+                    <a href="iconic-looks.html">Iconic Looks & Products</a>
+                </li>
+                <li>
+                    <a href="pop-culture.html">Celebrities & Pop Culture</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>About Me</h2>
+        <p>Hi! I created this site to explore how makeup and beauty standards have evolved across decades. I made this site to share my love for beauty and its history and highlight how modern trends reflect cultural change. I'd love to hear your thoughts—especially how you relate to makeup and fashion in your own life!</p>
+        <form action="https://httpbin.org/get" method="get">
+            <fieldset>
+                <legend>Personal Info</legend>
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" autocomplete="on" required>                    
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" autocomplete="on" required>                    
+                    </p>
+            </fieldset>
+            <fieldset>
+                <legend>Survey</legend>
+                    <label for="makeup-frequency">How often do you wear makeup?</label>
+                    <p>
+                        <input type="radio" name="makeup-frequency" id="daily" value="daily" required />
+                        <label for="daily">Daily</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="makeup-frequency" id="often" value="often" />
+                        <label for="often">Often</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="makeup-frequency" id="sometimes" value="sometimes" />
+                        <label for="sometimes">Sometimes</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="makeup-frequency" id="rarely" value="rarely" />
+                        <label for="rarely">Rarely</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="makeup-frequency" id="never" value="never" />
+                        <label for="never">Never</label>
+                    </p>
+                    <p>
+                        <label for="question">What influences your fashion or style choices the most (e.g., comfort, trends, culture, budget)?</label>
+                        <br>
+                        <textarea name="question" id="question" cols="30" rows="5" required></textarea>
+                    </p>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>
+            Content created with the help of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>.
+        </p>
+        <p>
+            <a href="site.html">Site Information</a>
+        </p>
+        <p>
+            <a href="contact.html">Contact Me</a>
+        </p>
+        <p>
+            <a href="#">Back to Top</a>
+        </p>
+    </footer>
+</body>
+</html>
