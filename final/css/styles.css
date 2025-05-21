@@ -1,0 +1,797 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* base typography */
+body {
+    font-family: "Lora", serif;
+    line-height: 1.5;
+    background-color: #fde5ff;
+    color: #000;
+    font-size: 1rem;
+    text-align: left;
+}
+
+header {
+    background-color: #d6c0f7;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+    border: #000 2px solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    margin: 0.75rem;
+}
+
+nav h2 {
+    position: absolute;
+    left: -10000px;
+}
+
+/* navigation flexbox */
+nav ul {
+    list-style: none;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    padding: 0.25rem;
+    border: 1px solid transparent; /* Prevent layout shift */
+    display: inline-block;
+}
+
+/* highlight effect for interactivity and accessibility */
+nav a:hover, nav a:focus {
+    background-color: #d1ffdd;
+    border-radius: 5px;
+    color: #000;
+    text-decoration: none;
+    border: #000 solid 1px;
+}
+
+main {
+    margin: 0.5rem 1.1rem;
+    /* padding-bottom: 2.5rem; */
+}
+
+/* heading styles for hierarchy*/
+h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-style: italic;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+section {
+    margin: 1rem 0;
+}
+
+main p {
+    margin-bottom: 0.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* italics for visual emphasis */
+figcaption {
+    font-style: italic;
+}
+
+/* details + summary styled like button */
+details {
+    display: inline-block;
+    margin: 0.25rem;
+    background-color: #fff0fa;
+    border: 2px dashed #8c266f;
+    border-radius: 8px;
+}
+
+details[open] > p {
+    padding: 0.25rem;
+}
+
+/* open state color change */
+details[open] > summary {
+    background-color: #c0c6f7;
+    border-radius: 8px 8px 0 0;
+}
+
+summary {
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+/* highlight effect */
+summary:hover, summary:focus {
+    border-radius: 8px;
+    background-color: #e5ffec;
+}
+
+/* base link styles */
+a {
+    color: #3300ff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #7a0c4e;
+}
+
+/* color shift & underline for interactivity and accessibility */
+a:hover, a:focus {
+    color: #8b99ff;
+    text-decoration: underline;
+}
+
+main ul {
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+main li {
+    padding-left: 0.5rem;
+}
+
+main ul ::marker {
+    content: "\2665";   /* custom heart bullet */
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0.5rem;
+    background-color: #fff;
+    font-size: 0.95rem;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 0.75rem;
+}
+
+thead {
+    background-color: #c0c6f7;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #e5ffec;  /* alternating row colors for readability */
+}
+
+caption {
+    text-align: left;
+    font-style: italic;
+}
+
+/* footer flexbox at bottom of page */
+footer {
+/*     position: fixed;
+    bottom: 0;
+    width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #8c266f;
+    color: #fff;
+    padding: 1rem;
+}
+
+footer p {
+    flex: 1;
+}
+
+footer a {
+    color: #c3d6ff;
+    padding: 0.25rem;
+    display: inline-block;
+    border: 1px solid transparent; /* Prevent layout shift */
+}
+
+footer a:visited {
+    color: #fbd0ff;
+}
+
+/* highlight effect */
+footer a:hover, footer a:focus {
+    background-color: #d1ffdd;
+    border-radius: 5px;
+    color: #000;
+    text-decoration: none;
+    border: #000 solid 1px;
+}
+
+/* ========== FEATURED DECADES SECTION ========== */
+.featured-decades-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.featured-decades-grid figure {
+    width: 80%;
+    max-width: 275px;
+}
+
+/* ========== MODERN MAKEUP SECTION ========== */
+.modern-makeup-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.modern-makeup-grid figure {
+    max-width: 250px;
+}
+
+/* ========== FASHION DESIGNERS SECTION ========== */
+.fashion-designers-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+/* ========== CENTURY OF STYLE & BEAUTY SECTION ========== */
+.timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.timeline-grid article {
+    background-color: #fff;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: #8c266f 1.5px solid;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #d6c0f7;
+}
+
+/* ========== TREND BUZZWORDS SECTION ========== */
+.trend-buzzwords-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    justify-items: center;
+}
+
+/* ========== ICONIC BRANDS SECTION ========== */
+.iconic-brands-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* ========== K-BEAUTY SECTION ========== */
+.k-beauty-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* ========== INFLUENCER-FAVORITE PRODUCTS SECTION ========== */
+.influencer-faves-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem 1rem;
+    align-items: center;
+}
+
+/* ========== ICONS OF EACH ERA SECTION ========== */
+.icons-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.icons-grid figure {
+    width: 80%;
+    max-width: 275px;
+}
+
+/* ========== ANCIENT ORIGINS SECTION ========== */
+.egypt-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem 1.3rem;
+}
+
+.gen-z-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+}
+
+/* sticky note styled aside */
+.sticky {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    background-color: #fff8c1;
+    border: #f47d10 2px dotted;
+}
+
+/* pop-up ad styled aside */
+.popup {
+/*     position: absolute;
+    right: 300px;
+    bottom: -150px; */
+    width: 300px;
+    padding: 1rem;
+    background-color: #fff0fa;
+    border: 1.5px solid #000;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+  
+.popup h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* color palette swatch boxes */
+.color-palette {
+    display: inline-block;
+    width: 150px;
+    line-height: 150px;
+    margin: 1rem;
+    text-align: center;
+    border: 1.5px solid #000;
+    border-radius: 5%;
+}
+
+.background {
+    background-color: #fde5ff;
+}
+
+.primary {
+    background-color: #d6c0f7;
+}
+
+.secondary {
+    background-color: #8c266f;
+    color: #fff;
+}
+
+.tertiary {
+    background-color: #c0c6f7;
+}
+
+.accent {
+    background-color: #e5ffec;
+}
+
+/* sm devices (≥576px) */
+/* Switch nav links from a stacked column to a horizontal row
+   Change heading sizes
+   Turn timeline back into a 3-column grid with center line/dots */
+@media (min-width: 576px) {
+    nav ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    nav a {
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .timeline-grid {    /* Grid layout with 3 columns to simulate a timeline; Thin vertical line and dots added in the center; Alternates articles left and right */
+        display: grid;
+        grid-template-columns: 1fr 0.125rem 1fr;
+        position: relative;
+        column-gap: 0.5rem;
+    }
+
+    .timeline-grid h2, .timeline-grid p:first-of-type {
+        grid-column: 1 / span 3;
+    }
+
+    /* central vertical line */
+    .timeline-grid::before {
+        content: "";
+        position: absolute;
+        grid-row: 3;
+        grid-column: 2;
+        width: 0.125rem;
+        height: 100%;
+        background-color: #8c266f;
+    }
+
+    /* dots in center line */
+    .timeline-grid article::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15px;
+        height: 15px;
+        background-color: #000;
+        box-shadow: 0 2px 5px #8c266f80;
+        border-radius: 50%;
+    }
+
+    /* even articles on left */
+    .timeline-grid article:nth-child(even) {
+        grid-column: 1 / span 3;
+        width: calc((100% - 3.25rem)/2);
+        text-align: right;
+    }
+
+    /* odd on right */
+    .timeline-grid article:nth-child(odd) {
+        grid-column: 3;
+    }
+}
+
+/* md devices (≥768px) */
+/* Footer switches from vertical to horizontal Flexbox
+   Change heading sizes
+   Multiple sections (featured-decades, fashion-designers, etc.) upgrade from 1-column mobile grid to 2-column layouts
+   Modern-makeup and Gen-Z grids: image on right, text on left, second article or table spans full width */
+@media (min-width: 768px) {
+    header {
+        gap: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    footer {
+        flex-direction: row;
+    }
+
+    .featured-decades-grid {
+        grid-template-columns: auto 1fr;
+        justify-items: start;
+        grid-template-areas:
+            "heading heading"
+            "image article1"
+            "article2 article2"
+            "article3 article3";
+        gap: 0.5rem 1rem;
+    }
+    
+    .featured-decades-grid h2 {
+        grid-area: heading;
+    }
+
+    .featured-decades-grid figure {
+        grid-area: image;
+        width: 275px;
+        max-width: 100%;
+    }
+
+    .featured-decades-grid article:nth-of-type(1) {
+        grid-area: article1;
+    }
+
+    .featured-decades-grid article:nth-of-type(2) {
+        grid-area: article2;
+    }
+
+    .featured-decades-grid article:nth-of-type(3) {
+        grid-area: article3;
+    }
+
+    .fashion-designers-grid {   /* Grid layout with image on the left and list on the right */
+        grid-template-columns: auto 1fr;
+        column-gap: 1rem;
+        justify-items: start;
+    }
+
+    .fashion-designers-grid h2 {
+        grid-column: 1 / span 2;
+    }
+
+    .k-beauty-grid {    /* Grid layout with image on the left and paragraph on the right */ 
+        grid-template-columns: auto 1fr;
+        gap: 0 1.5rem;
+        align-items: center;
+    }
+
+    .k-beauty-grid figure {
+        grid-row: 1 / span 3;
+        width: 350px;
+    }
+
+    .icons-grid {
+        grid-template-columns: auto 1fr;
+        justify-items: start;
+        grid-template-areas:
+            "figure heading"
+            "figure article1"
+            "figure ."
+            "article2 article2"
+            "article3 article3"
+            "article4 article4"
+            "article5 article5";
+    }
+
+    .icons-grid figure {
+        grid-area: figure;
+        width: 275px;
+        max-width: 100%;
+    }
+
+    .icons-grid h2 {
+        grid-area: heading;
+    }
+
+    .icons-grid article:nth-of-type(1) {
+        grid-area: article1;
+    }
+
+    .icons-grid article:nth-of-type(2) {
+        grid-area: article2;
+    }
+
+    .icons-grid article:nth-of-type(3) {
+        grid-area: article3;
+    }
+
+    .icons-grid article:nth-of-type(4) {
+        grid-area: article4;
+    }
+
+    .icons-grid article:nth-of-type(5) {
+        grid-area: article5;
+    }
+
+    .egypt-grid {   /* Grid layout with paragraph on the left and image on the right */
+        grid-template-columns: 1fr auto;
+    }
+
+    .egypt-grid h3 {
+        grid-column: span 2;
+    }
+
+    .egypt-grid figure {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .influencer-faves-grid {    /* Grid layout with image and list on the left and aside on the right */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .influencer-faves-grid h2 {
+        grid-column: span 2;
+    }
+
+    .influencer-faves-grid ul {
+        grid-column: 1;
+    }
+
+    .influencer-faves-grid aside {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+    }
+    
+    .modern-makeup-grid {
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+        "figure heading1"
+        "figure text"
+        "figure ."
+        "heading2 ."
+        "table table";
+        gap: 0.5rem 1.5rem;
+        justify-items: start;
+    }
+
+    .modern-makeup-grid figure {
+        grid-area: figure;
+        max-width: 100%;
+    }
+
+    .modern-makeup-grid h2:first-of-type {
+        grid-area: heading1;
+    }
+
+    .modern-makeup-grid p {
+        grid-area: text;
+    }
+
+    .modern-makeup-grid h2 {
+        grid-area: heading2;
+    }
+
+    .modern-makeup-grid table {
+        grid-area: table;
+    }
+
+    .gen-z-grid {
+        grid-template-columns: 1fr auto;
+        justify-items: start;
+        align-items: center;
+        gap: 0.5rem 1rem;
+        grid-template-areas: 
+            "heading  heading"
+            "article1 figure"
+            "article2 article2";
+    }
+
+    .gen-z-grid h2 {
+        grid-area: heading;
+    }
+
+    .gen-z-grid figure {
+        grid-area: figure;
+    }
+
+    .gen-z-grid article:first-of-type {
+        grid-area: article1;
+    }
+
+    .gen-z-grid article:last-of-type {
+        grid-area: article2;
+    }
+}
+
+/* lg devices (≥992px) */
+/* Widen figure columns, add extra column-gaps
+   Trend-buzzwords and iconic-brands sections expand to 2-column
+   Modern-makeup & Gen-Z grids keep image anchored right while stacking text blocks on the left */
+@media (min-width: 992px) {
+    footer p:first-of-type {
+        white-space: nowrap;
+    }
+
+    .featured-decades-grid {
+        grid-template-areas:
+            "heading heading"
+            "image article1"
+            "image article2"
+            "article3 article3";
+    }
+
+    .featured-decades-grid figure {
+        width: 300px;
+    }
+
+    .trend-buzzwords-grid { /* Grid layout with image on the left and list on the right */
+        grid-template-columns: auto 1fr;
+        column-gap: 1rem;
+        justify-items: start;
+    }
+
+    .trend-buzzwords-grid figure {
+        grid-row: 1 / span 4;
+    }
+
+    .iconic-brands-grid {   /* Grid layout with articles in 2 columns */
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .iconic-brands-grid h2 {
+        grid-column: span 2;
+    }
+
+    .k-beauty-grid figure {
+        width: 100%;
+    }
+
+    .icons-grid {
+        grid-template-areas:
+            "figure heading"
+            "figure article1"
+            "figure article2"
+            "article3 article3"
+            "article4 article4"
+            "article5 article5";
+    }
+
+    .icons-grid figure {
+        width: 350px;
+    }
+
+    .modern-makeup-grid {   /* Grid layout with image on the left spanning multiple rows (centered vertically) and articles on the right */
+        align-items: center;
+        grid-template-areas:
+        "figure heading1"
+        "figure text"
+        "figure heading2"
+        "figure table";
+    }
+
+    .gen-z-grid {
+        align-items: start;
+        grid-template-areas:
+            "heading  heading"
+            "article1 figure"
+            "article2 figure";
+    }
+}
+
+/* xl devices (≥1200px) */
+/* Allow images to grow to full column width
+   Icons-grid gets additional side-by-side items before stacking */
+@media (min-width: 1200px) {
+    .featured-decades-grid {    /* Grid layout with heading across top, image on the left, and three articles stacked on the right */
+        grid-template-areas:
+            "heading heading"
+            "image article1"
+            "image article2"
+            "image article3";
+        gap: 0.25rem 1rem;
+    }
+
+    .featured-decades-grid figure {
+        width: 100%;
+    }
+
+    .icons-grid {
+        grid-template-areas:
+            "figure heading"
+            "figure article1"
+            "figure article2"
+            "figure . "
+            "article3 article3"
+            "article4 article4"
+            "article5 article5";
+    }
+
+    .icons-grid figure {
+        width: 100%;
+    }
+}
+
+/* xxl devices (≥1400px) */
+/* More text next to image in icons-grid */
+@media (min-width: 1400px) {
+    .icons-grid {   /* Grid layout with image on the left, heading and 3 articles stacked on the right; Remaining articles are full length underneath */
+        grid-template-areas:
+            "figure heading"
+            "figure article1"
+            "figure article2"
+            "figure article3"
+            "article4 article4"
+            "article5 article5";
+    }
+}
