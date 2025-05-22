@@ -450,6 +450,30 @@ footer a:hover, footer a:focus {
     background-color: #e5ffec;
 }
 
+.hero {
+    background-image: url('../img/cosmetics-print.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: rgba(214, 192, 247, 0.70);
+    border: #000 1px solid;
+    border-radius: 3px;
+    padding: 1rem;
+}
+
+.container h1 {
+    text-shadow: #000 1px 1px 2px;
+}
+
+.container nav {
+    background-color: #c0c6f7;
+    border: #000 1px solid;
+    border-radius: 5px;
+    text-shadow: #8c266f 0.25px 0.25px 0.5px;
+}
+
 /* sm devices (≥576px) */
 /* Switch nav links from a stacked column to a horizontal row
    Change heading sizes
@@ -517,6 +541,10 @@ footer a:hover, footer a:focus {
     /* odd on right */
     .timeline-grid article:nth-child(odd) {
         grid-column: 3;
+    }
+
+    .hero {
+        padding: 2rem;
     }
 }
 
@@ -800,6 +828,14 @@ footer a:hover, footer a:focus {
             "article1 figure"
             "article2 figure";
     }
+
+    .container {
+        padding: 2rem;
+    }
+
+    .container h1 {
+        margin-bottom: 3rem;
+    }
 }
 
 /* xl devices (≥1200px) */
@@ -846,5 +882,17 @@ footer a:hover, footer a:focus {
             "figure article3"
             "article4 article4"
             "article5 article5";
+    }
+    
+    .hero {
+        padding: 3rem;
+    }
+
+    .container {
+        padding: 2.5rem;
+    }
+
+    .container h1 {
+        margin-bottom: 4rem;
     }
 }

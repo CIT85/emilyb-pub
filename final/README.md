@@ -59,3 +59,8 @@ Feature icons like Cher, Madonna, Beyoncé, and Lady Gaga.
 * Proper heading hierarchy (`h1`, `h2`, `h3`) used in logical order for all sections
 * All images include meaningful `alt` attributes
 * Sufficient color contrast ratio between text and backgrounds
+
+## Hero Image Design
+* Used as a background image in the header of index, behind title and nav links.
+* Colorful watercolor style image of various cosmetics adds personality to the site and immediately communicates the topic to users.
+* Added text-shadow to heading and nav as well as a semi-transparent background for contrast.
